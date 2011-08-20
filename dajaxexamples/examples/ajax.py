@@ -57,14 +57,17 @@ def updatecombo(request, option, id):
         elif option == 'fr': 
             options = ['Paris', 'Evreux', 'Le Havre', 'Reims']
         else: 
-            options = ['']
+            options = ['----']
         
         out = ""
         for o in options:
             out = '%s<option value="#">%s</option>' % (out, o)
-    
+ 
         dajax.assign('#combo2', 'innerHTML', out)
+        dajax.assign('#result', 'value', out)
+        
         return dajax.json()
+
     else:
         pass
     

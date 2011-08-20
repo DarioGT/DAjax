@@ -1,11 +1,13 @@
 {% extends "examples/examples_base.html"%}
 {% block content %}
 <h1>Ajax Form Machine!</h1>
-	<select name="combo1" id="combo1" onchange="Dajaxice.examples.updatecombo(Dajax.process,{'option':this.value, 'id':'combo1'})" size="1">
+	<select onchange="Dajaxice.examples.updatecombo(Dajax.process,{&#39;option&#39;:this.value, &#39id&#39:&#39combo1&#39})" name="combo1" id="combo1"  size="1">
 		<option value="">Select...</option>
 		<option value="sp">Spain</option>
 		<option value="fr">France</option>
 	</select>
 	<select name="combo2" id="combo2" onchange="Dajaxice.examples.updatecombo(Dajax.process,{'option':this.value, 'id':'combo2'})" size="1"></select>
+
+	<input type="text" name="result" value="" id="result">
 
 {% endblock %}
